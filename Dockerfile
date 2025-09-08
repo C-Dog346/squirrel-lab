@@ -1,4 +1,5 @@
 FROM alpine:latest
 
-RUN apk add bash
+RUN net user /add bob && apk add bash
+USER bob
 ADD dummy.txt .
